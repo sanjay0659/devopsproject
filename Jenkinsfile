@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('docker login'){
             steps{
-                sh "docker login -u botadmin -p Ganga@99 docker.io"
+                sh "docker login -u botadmin -p Gangadhar@99 docker.io"
 
                 echo "login success"
             }

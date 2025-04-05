@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        IMAGETAG = "${env.GIT_COMMIT}"
+        IMAGETAG = "${env.GIT_COMMIT.take(2)}"
     }
     stages{
         stage('docker login'){
@@ -13,7 +13,7 @@ pipeline{
         }
         stage('docker image build'){
             steps{
-                sh "docker build -t botadmin/project1:${IMAGETAG}"
+                sh "docker build -t botadmin/project1:${IMAGETAG} ."
                 echo "Image build is successful"
                 sh "docker image ls"
             }

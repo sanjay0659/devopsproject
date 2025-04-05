@@ -8,6 +8,7 @@ pipeline{
 
                 echo "login success"
             }
+        }
         stage('docker image build'){
             steps{
                 sh "docker build -t botadmin/project1:${env.GITCOMMIT}"
@@ -22,7 +23,4 @@ pipeline{
         }
             
         }
-        
-
-    }
 }

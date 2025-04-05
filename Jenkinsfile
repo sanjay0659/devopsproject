@@ -4,7 +4,7 @@ pipeline{
         IMAGETAG = "${env.GIT_COMMIT.take(2)}"
     }
     stages{
-        stage('docker login'){
+        stage('docker login page'){
             steps{
                 sh "docker login -u botadmin -p Gangadhar@99 docker.io"
 

@@ -2,5 +2,5 @@
 import time
 print("hello world")
 
-time.sleep(99999)
+time.sleep(9999999)
 
